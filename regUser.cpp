@@ -1,6 +1,0 @@
-//regUser.cpp
-
-void regUser()
-{
-
-}

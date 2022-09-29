@@ -1,6 +1,0 @@
-//logUser.cpp
-
-void logUser()
-{
-
-}

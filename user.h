@@ -1,7 +1,8 @@
 //user.h
 #pragma once
 
-#include <string>
+#include <iostream>
+#include "msg.h"
 
 class Room;
 

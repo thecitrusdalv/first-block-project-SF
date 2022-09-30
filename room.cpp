@@ -1,8 +1,5 @@
 //room.cpp
 
-#include <iostream>
-#include <vector>
-
 #include "room.h"
 #include "user.h"
 
@@ -25,9 +22,10 @@
 //friends
 	std::ostream& operator<< (std::ostream& out, const Room& room)
 	{
-		out << "Room: " << room.m_name << std::endl;
+		out << "Room: " << room.m_name << '\n';
+		out << "Users:" << '\n';
 		for (size_t i = 0; i < room.usersInRoom.size(); i++) {
-			out << room.usersInRoom[i]->getName();
+			out << '\t' << room.usersInRoom[i]->getName();
 
 			if (i != room.usersInRoom.size()-1)
 				out << '\n';

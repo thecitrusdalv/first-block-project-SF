@@ -1,6 +1,5 @@
 //user.cpp
 
-#include <iostream>
 #include "user.h"
 #include "room.h"
 

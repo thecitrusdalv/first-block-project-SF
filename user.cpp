@@ -30,6 +30,21 @@
 		return m_name;
 	}
 
+//methods
+	int User::addMsg(const Msg& msg)
+	{
+		msgVec.push_back(msg);
+		return msgVec.size();
+	}
+
+	void User::showMsg() const
+	{
+		for (size_t i = 0; i < msgVec.size(); i++) {
+			std::cout << msgVec[i].name << ": " <<
+				msgVec[i].message << std::endl;
+		}
+	}
+
 //friends
 	std::ostream& operator<< (std::ostream& out, const User& user)
 {

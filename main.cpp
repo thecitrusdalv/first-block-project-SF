@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "server.h"
+#include "entry.h"
 
 int main ()
 {

@@ -27,6 +27,10 @@ public:
 	
 //getters
 	const std::string& getName() const;
+	
+//methods
+	int addMsg(const Msg&);
+	void showMsg() const;
 
 //friends
 	friend void join(User&, Room&);

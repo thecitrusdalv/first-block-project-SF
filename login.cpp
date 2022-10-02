@@ -14,10 +14,10 @@ void login(Server& server)
 		std::cout << "Login: ";
 			std::cin >> login;
 
-		if (login == "exit")
+		if (login == "back")
 			break;
 		
-		if (login == ":exit")
+		if (login == "exit")
 			exit(0);
 
 		int index;

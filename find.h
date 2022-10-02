@@ -1,11 +1,4 @@
-//entry.h
-#pragma once
-
-#include <iostream>
 #include <vector>
-
-#include "server.h"
-#include "reg.h"
 
 template <typename TYPE>
 int findInVec(const std::vector<TYPE> &vec, const TYPE& obj)
@@ -17,6 +10,3 @@ int findInVec(const std::vector<TYPE> &vec, const TYPE& obj)
 
 	return -1;
 }
-
-void entry(Server&);
-

@@ -26,10 +26,10 @@
 		return msgVec.size();
 	}
 
-	Void Room::showMsg() const
+	void Room::showMsg() const
 	{
 		for (size_t i = 0; i < msgVec.size(); i++) {
-			std::cout << msgVec[i].name << ": " <<
+			std::cout << "-> " << msgVec[i].name << ": " <<
 				msgVec[i].message << std::endl;
 		}
 	}
@@ -40,10 +40,10 @@
 
 		out << "Users:" << '\n';
 		for (size_t i = 0; i < room.usersInRoom.size(); i++) {
-			out << '\t' << room.usersInRoom[i]->getName();
+			out << '\t' << room.usersInRoom[i]->getName() << '\n';
 
-			if (i != room.usersInRoom.size()-1)
-				out << '\n';
+			//if (i != room.usersInRoom.size()-1)
+				//out << '\n';
 		}
 
 		out << "Messages:" << '\n';

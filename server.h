@@ -16,7 +16,7 @@ class Server
 {
 	const std::string m_name;
 	std::vector<User> usersVec;
-	std::vector<Room> roomsVec;
+	std::vector<Room> roomsVec = {{"general"}};
 public:
 //constr, destr
 	Server(const std::string&);
@@ -49,5 +49,7 @@ public:
 	
 //friends
 	friend std::ostream& operator<< (std::ostream&, const Server&);
+	friend void login(Server&);
 	friend void join (User&, Room&);
+	friend void userSpace(User&, Server&);
 };

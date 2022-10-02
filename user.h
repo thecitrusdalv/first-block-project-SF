@@ -6,11 +6,13 @@
 
 #include "msg.h"
 
+class Server;
 class Room;
 
 class User
 {
-	const std::string m_login, m_pass, m_name;
+	const std::string m_login, m_pass;
+	std::string m_name;
 	Room *roomPtr = nullptr;
 	std::vector<Msg> msgVec;
 
@@ -34,5 +36,6 @@ public:
 
 //friends
 	friend void join(User&, Room&);
+	friend void userSpace(User&, Server&);
 	friend std::ostream& operator<< (std::ostream&, const User&);
 };

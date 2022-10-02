@@ -51,5 +51,6 @@ public:
 	friend std::ostream& operator<< (std::ostream&, const Server&);
 	friend void login(Server&);
 	friend void join (User&, Room&);
+	friend void entry (Server&);
 	friend void userSpace(User&, Server&);
 };

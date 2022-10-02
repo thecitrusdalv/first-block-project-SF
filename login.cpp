@@ -25,12 +25,8 @@ void login(Server& server)
 			std::cout << "Password: ";
 				std::cin >> pass;
 
-			if (users[index].getPass() == pass) {
-				std::cout << "\tHello, " <<
-					users[index].getName() << ".\n" << std::endl;
-
+			if (users[index].getPass() == pass) 
 				userSpace(users[index], server);
-			}
 			else
 				std::cout << "\tIncorrect password" << std::endl;
 		}

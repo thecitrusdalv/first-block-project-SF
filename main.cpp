@@ -1,4 +1,5 @@
 #include <iostream>
+#include <exception>
 
 #include "server.h"
 #include "entry.h"
@@ -6,9 +7,21 @@
 
 int main ()
 {
-	Server server ("server");
-	server.addUser("citrus","1234","cit");
-	server.addUser("roma","1234","romych");
-	entry(server);
+begin:
+	try {
+		Server server ("server");
+		server.addRoom("second");
+
+		server.addUser("citrus","1234","citrus");
+		server.addUser("roma","1234","roma");
+
+		entry(server);
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+		goto begin;
+	}
+
 	return 0;
 }

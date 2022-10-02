@@ -2,7 +2,7 @@
 
 #include "reg.h"
 
-void reg(Server &server)
+int reg(Server &server)
 {
 	std::string login, pass, name;
 
@@ -51,6 +51,6 @@ void reg(Server &server)
 			break;
 	}
 
-	server.addUser(login, pass, name);
+	return server.addUser(login, pass, name);
 }
 

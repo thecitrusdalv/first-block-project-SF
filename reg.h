@@ -5,4 +5,4 @@
 
 #include "server.h"
 
-void reg(Server&);
+int reg(Server&);

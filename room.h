@@ -31,6 +31,7 @@ public:
 //methods
 	int addMsg(const Msg&);
 	void showMsg() const;
+	void showUsers() const;
 
 //friends
 	friend void join(User&, Room&);

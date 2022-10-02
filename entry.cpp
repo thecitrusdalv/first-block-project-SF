@@ -16,6 +16,7 @@ void entry(Server& server)
 
 		if (choise == "register") {
 			reg(server);
+		//	join(server.usersVec.back(), server.roomsVec[0]);
 		}
 
 		if (choise == ":exit") {

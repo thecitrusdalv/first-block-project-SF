@@ -17,6 +17,9 @@ void userSpace(User& user, Server& server) {
 		std::cout << user.getName() << ": ";
 		std::getline(std::cin, input);
 
+		if (input[0] == ':') {
+
+
 		if (input == ":out")
 			break;
 

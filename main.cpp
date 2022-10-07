@@ -7,7 +7,6 @@
 
 int main ()
 {
-begin:
 	try {
 		Server server ("server");
 		server.addRoom("second");
@@ -20,7 +19,6 @@ begin:
 	catch (const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
-		goto begin;
 	}
 
 	return 0;

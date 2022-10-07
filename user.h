@@ -15,6 +15,7 @@ class User
 	std::string m_name;
 	Room *roomPtr = nullptr;
 	std::vector<Msg> msgVec;
+	size_t readedCount = 0;
 
 public:
 	User(const std::string&, const std::string&, const std::string&);
@@ -32,10 +33,11 @@ public:
 
 //methods
 	int addMsg(const Msg&);
-	void showMsg() const;
+	void showMsg();
 
 //friends
 	friend void join(User&, Room&);
 	friend void userSpace(User&, Server&);
+	friend void list(User&, Server&, const std::vector<std::string>&);
 	friend std::ostream& operator<< (std::ostream&, const User&);
 };

@@ -37,12 +37,16 @@
 		return msgVec.size();
 	}
 
-	void User::showMsg() const
+	void User::showMsg()
 	{
-		for (size_t i = 0; i < msgVec.size(); i++) {
-			std::cout << msgVec[i].name << ": " <<
-				msgVec[i].message << std::endl;
+		std::cout << '\n';
+		for (; readedCount < msgVec.size(); readedCount++) {
+			std::cout << '\t' << msgVec[readedCount].name << ": " <<
+				msgVec[readedCount].message << '\n';
 		}
+		std::cout << std::endl;
+
+		readedCount = msgVec.size();
 	}
 
 //friends

@@ -1,3 +1,4 @@
+//find.h
 #include <vector>
 
 template <typename TYPE>
@@ -8,5 +9,5 @@ int findInVec(const std::vector<TYPE> &vec, const TYPE& obj)
 			return i;
 	}
 
-	return -1;
+	return NOT_FOUND;
 }

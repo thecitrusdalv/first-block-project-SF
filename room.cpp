@@ -29,16 +29,17 @@
 	void Room::showMsg() const
 	{
 		for (size_t i = 0; i < msgVec.size(); i++) {
-			std::cout << "\t-> " << msgVec[i].name << ": " <<
-				msgVec[i].message << std::endl;
+			std::cout << msgVec[i].name << ": " <<
+				msgVec[i].message << '\n';
 		}
+		std::cout << std::endl;
 	}
 
 	void Room::showUsers() const
 	{
 		std::cout << '\n';
 		for (size_t i = 0; i < usersInRoom.size(); i++) {
-			std::cout << '\t' << usersInRoom[i]->getName() << '\n';
+			std::cout << usersInRoom[i]->getName() << '\n';
 		}
 		std::cout << std::endl;
 	}

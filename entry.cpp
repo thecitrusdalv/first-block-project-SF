@@ -7,8 +7,8 @@ void entry(Server& server)
 	std::string choise;
 
 	for (;;) {
-		std::cout << "login/register?: ";
-		std::cin >> choise;
+		std::cout << "login/register/exit?: ";
+		std::cin >> choise; std::cin.ignore(1000, '\n');
 
 		if (choise == "login") {
 			login(server);
@@ -16,10 +16,9 @@ void entry(Server& server)
 
 		if (choise == "register") {
 			reg(server);
-		//	join(server.usersVec.back(), server.roomsVec[0]);
 		}
 
-		if (choise == ":exit") {
+		if (choise == "exit") {
 			exit(0);
 		}
 	}

@@ -7,16 +7,5 @@
 #include "server.h"
 #include "reg.h"
 
-template <typename TYPE>
-int findInVec(const std::vector<TYPE> &vec, const TYPE& obj)
-{
-	for (size_t i = 0; i < vec.size(); i++) {
-		if (vec[i] == obj)
-			return i;
-	}
-
-	return -1;
-}
-
-void entry(Server&);
+void entry(Server&); //Выполняет вход в сервер.
 

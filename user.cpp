@@ -39,12 +39,10 @@
 
 	void User::showMsg()
 	{
-		std::cout << '\n';
 		for (; readedCount < msgVec.size(); readedCount++) {
 			std::cout << '\t' << msgVec[readedCount].name << ": " <<
-				msgVec[readedCount].message << '\n';
+				msgVec[readedCount].message << std::endl;
 		}
-		std::cout << std::endl;
 
 		readedCount = msgVec.size();
 	}

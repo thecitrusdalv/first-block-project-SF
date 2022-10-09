@@ -37,11 +37,9 @@
 
 	void Room::showUsers() const
 	{
-		std::cout << '\n';
 		for (size_t i = 0; i < usersInRoom.size(); i++) {
-			std::cout << usersInRoom[i]->getName() << '\n';
+			std::cout << '\t' << usersInRoom[i]->getName() << std::endl;
 		}
-		std::cout << std::endl;
 	}
 
 //friends

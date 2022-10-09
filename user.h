@@ -13,9 +13,9 @@ class User
 {
 	const std::string m_login, m_pass;
 	std::string m_name;
-	Room *roomPtr = nullptr;
-	std::vector<Msg> msgVec;
-	size_t readedCount = 0;
+	Room *roomPtr = nullptr;	//Указатель на текущую комнату, по умолчанию нет.
+	std::vector<Msg> msgVec;	//Вектор приватных сообщений.
+	size_t readedCount = 0;		//Переменная для учета прочтенных приватных сообщений.
 
 public:
 	User(const std::string&, const std::string&, const std::string&);
@@ -32,8 +32,8 @@ public:
 	const std::string& getName() const;
 
 //methods
-	int addMsg(const Msg&);
-	void showMsg();
+	int addMsg(const Msg&); //Добавление приватного сообщения
+	void showMsg(); //Вывод приватных сообщений
 
 //friends
 	friend void join(User&, Room&);

@@ -1,6 +1,7 @@
 //find.h
 #include <vector>
 
+//Поиск элемента в векторе и возврат его индекса, либо NOT_FOUND
 template <typename TYPE>
 int findInVec(const std::vector<TYPE> &vec, const TYPE& obj)
 {

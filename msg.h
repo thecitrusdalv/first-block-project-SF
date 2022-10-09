@@ -3,8 +3,9 @@
 
 #include <string>
 
+//Структура сообщения.
 struct Msg
 {
-	std::string name;
-	std::string message;
+	std::string name; //Имя владельца сообщения
+	std::string message; //Сообщение
 };

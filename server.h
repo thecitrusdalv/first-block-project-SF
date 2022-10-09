@@ -7,6 +7,7 @@
 #include "user.h"
 #include "room.h"
 
+//Глобальные константы с кодами ошибок
 enum serverErrors {
 	FAILED		= -1,
 	NOT_FOUND	= -2
@@ -14,8 +15,10 @@ enum serverErrors {
 
 class Server
 {
-	const std::string m_name;
-	std::vector<User> usersVec;
+	const std::string m_name; //Имя сервера
+	std::vector<User> usersVec; //Вектор юзеров, созданных на сервере.
+
+	//Вектор комнат, созданных на сервере. По умолчанию есть комната "general".
 	std::vector<Room> roomsVec = {{"general"}};
 public:
 //constr, destr
@@ -29,19 +32,19 @@ public:
 	void operator= (const Server&);
 
 //methods
-	int addUser(const std::string&,
+	int addUser(const std::string&, //Добавление юзера на сервер
 			const std::string&,
 			const std::string&);
 
-	int addRoom(const std::string&);
+	int addRoom(const std::string&); //Добавление комнаты
 
-	int findName(const std::string&);
+	int findName(const std::string&); //Поиск по имени юзера
 
-	int findLogin(const std::string&);
+	int findLogin(const std::string&); //Поиск по логину
 
-	int findUser(const std::string&, const std::string&);
+	int findUser(const std::string&, const std::string&); //Поиск юзера по имени или логину
 
-	int findRoom(const std::string&);
+	int findRoom(const std::string&); //Поиск комнаты по ее имени
 
 //getters
 	const std::vector<User>& getUsersVec() const;

@@ -10,9 +10,9 @@ class User;
 
 class Room
 {
-	const std::string m_name;
-	std::vector<User*> usersInRoom;
-	std::vector<Msg> msgVec;
+	const std::string m_name;		//Имя комнаты.
+	std::vector<User*> usersInRoom;	//Вектор юзеров в комнате.
+	std::vector<Msg> msgVec;		//Вектор сообщений комнаты.
 
 public:
 //constr, destr
@@ -29,9 +29,9 @@ public:
 	const std::string& getName() const;
 	
 //methods
-	int addMsg(const Msg&);
-	void showMsg() const;
-	void showUsers() const;
+	int addMsg(const Msg&);	//Добавление сообщения в комнату.
+	void showMsg() const;	//Вывод сообщений комнаты.
+	void showUsers() const;	//Вывод юзеров в комнате
 
 //friends
 	friend void join(User&, Room&);

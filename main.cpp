@@ -3,22 +3,29 @@
 
 #include "server.h"
 #include "entry.h"
-#include "login.h"
 
 int main ()
 {
 	try {
-		Server server ("server");
-		server.addRoom("second");
+		Server server ("server");	//Создание сервера.
+									//Присваивание имени через конструктор
 
-		server.addUser("citrus","1234","citrus");
-		server.addUser("roma","1234","roma");
+		server.addRoom("second");	//Добавление дополнительной команты в сервер. (По
+									//умолчанию сервер имеет комнату "general").
 
-		entry(server);
+		entry(server); //Вход в созданный сервер.
 	}
 	catch (const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+	catch (const char* message)
+	{
+		std::cerr << "\nError: " << message << std::endl;
+	}
+	catch (...)
+	{
+		std::cerr << "\nUndefined error" << std::endl;
 	}
 
 	return 0;

@@ -5,5 +5,6 @@
 
 #include "server.h"
 #include "user.h"
+#include "userSpace.h"
 
-void login(Server&);
+void login(Server&); //Логгинг на сервер

@@ -10,9 +10,9 @@ class User;
 
 class Room
 {
-	const std::string m_name;		//Имя комнаты.
+	const std::string m_name;	//Имя комнаты.
 	std::vector<User*> usersInRoom;	//Вектор юзеров в комнате.
-	std::vector<Msg> msgVec;		//Вектор сообщений комнаты.
+	std::vector<Msg> msgVec;	//Вектор сообщений комнаты.
 
 public:
 //constr, destr
